@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='resources/styles/styles.css')}}">
+    </head>
+    <body class="background">
+        <section class="full-height">
+        <div class="absolute-center">
+            <div name="form" class="absolute-center">
+                <form class="flex-container" id="main_form">
+                    <h2>Секция спектаклей</h2>
+                    <div class="bold center-text white flex-item" style="margin-bottom: -20px;">Период</div>
+                    <div class="flex-item center" id="interval_start_date">
+                        <input class="flex-item" name="from" type="date">
+                        <p class="white"> - </p>
+                        <input class="flex-item" name="until" type="date">
+                    </div>
+                    <input class="flex-item" name="id" type="text" placeholder="Идентификатор автора" pattern="^[0-9]+$">
+                    <input class="flex-item" name="century" type="text" placeholder="Век" pattern="^[0-9]+$">
+                    <input class="flex-item" name="genre" type="text" placeholder="Жанр спектакля" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$">
+                    <input class="flex-item" name="country" type="text" placeholder="Страна" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$">
+                </form>
+            </div>
+            <div class="mt-20">
+                    <button id="send" type="button">Отправить</button>
+                    <button id="clear" type="button" style="margin-left: 20px;">Очистить</button>    
+            </div>
+            <div id = "error" class="mt-20 absolute-center"></div>
+        </div>
+            
+        </section>
+    <script src="{{ url_for('static', filename='js/search_forms.js')}}"></script>
+	</body>
+</html>

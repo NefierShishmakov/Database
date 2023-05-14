@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='resources/styles/styles.css')}}">
+    </head>
+    <body class="background">
+        <section class="full-height">
+        <div class="absolute-center">
+            <div name="form" class="absolute-center">
+                <form class="flex-container" id="main_form">
+                    <h2>Секция актёров для роли</h2>
+                    <input class="flex-item" name="role_name" type="text" placeholder="Роль" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$">
+                </form>
+            </div>
+            <div class="mt-20">
+                    <button id="send" type="button">Отправить</button>
+                    <button id="clear" type="button" style="margin-left: 20px;">Очистить</button>    
+            </div>
+            <div id = "error" class="mt-20 absolute-center"></div>
+        </div>
+            
+        </section>
+    <script src="{{ url_for('static', filename='js/search_forms.js')}}"></script>
+	</body>
+</html>

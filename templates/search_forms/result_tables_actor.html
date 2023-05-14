@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table align="center">
+        <caption>Результирующая таблица актёров</caption>
+        <tr>
+         {% for el in articles['actors']['columns'] %}
+         <th>{{el}}</th>
+         {% endfor %}
+        </tr>
+        {% for el in articles['actors']['values'] %}
+        <tr>
+            {% for e in el %}
+            <td>{{e}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <table align="center">
+        <caption>Результирующая таблица авторов</caption>
+        <tr>
+         {% for el in articles['author']['columns'] %}
+         <th>{{el}}</th>
+         {% endfor %}
+        </tr>
+        {% for el in articles['author']['values'] %}
+        <tr>
+            {% for e in el %}
+            <td>{{e}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <table align="center">
+        <caption>Результирующая таблица режиссёра постановщика</caption>
+        <tr>
+         {% for el in articles['director']['columns'] %}
+         <th>{{el}}</th>
+         {% endfor %}
+        </tr>
+        {% for el in articles['director']['values'] %}
+        <tr>
+            {% for e in el %}
+            <td>{{e}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <table align="center">
+        <caption>Результирующая таблица художника постановщика</caption>
+        <tr>
+         {% for el in articles['artist']['columns'] %}
+         <th>{{el}}</th>
+         {% endfor %}
+        </tr>
+        {% for el in articles['artist']['values'] %}
+        <tr>
+            {% for e in el %}
+            <td>{{e}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <table align="center">
+        <caption>Результирующая таблица дирижёра постановщика</caption>
+        <tr>
+         {% for el in articles['conductor']['columns'] %}
+         <th>{{el}}</th>
+         {% endfor %}
+        </tr>
+        {% for el in articles['conductor']['values'] %}
+        <tr>
+            {% for e in el %}
+            <td>{{e}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

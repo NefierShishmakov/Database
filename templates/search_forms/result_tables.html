@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if articles['amount'] != '' %}
+        <h1 width="100%" text-align="center">Общее количество равно: {{articles['amount']}}</h1>
+    {% endif %}
+    <table align="center">
+        <caption>Результирующая таблица</caption>
+        <tr>
+         {% for el in articles['columns'] %}
+         <th>{{el}}</th>
+         {% endfor %}
+        </tr>
+        {% for el in articles['values'] %}
+        <tr>
+            {% for e in el %}
+            <td>{{e}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

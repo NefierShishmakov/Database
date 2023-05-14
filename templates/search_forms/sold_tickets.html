@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='resources/styles/styles.css')}}">
+    </head>
+    <body class="background">
+        <section class="full-height">
+        <div class="absolute-center">
+            <div name="form" class="absolute-center">
+                <form class="flex-container" id="main_form">
+                    <h2>Секция проданных билетов</h2>
+                    <div class="bold center-text white flex-item" style="margin-bottom: -20px;">Период</div>
+                    <div class="flex-item center" id="interval_start_date">
+                        <input class="flex-item" name="from" type="date">
+                        <p class="white"> - </p>
+                        <input class="flex-item" name="until" type="date">
+                    </div>
+                    <input class="flex-item" name="repertoire_play_id" type="text" placeholder="Идентификатор спектакля" pattern="^[0-9]+$">
+                    <label for="checkbox" class="bold">Премьера</label>
+                    <input id="checkbox" type="checkbox" name="is_premiere">
+                </form>
+            </div>
+            <div class="mt-20">
+                    <button id="send" type="button">Отправить</button>
+                    <button id="clear" type="button" style="margin-left: 20px;">Очистить</button>    
+            </div>
+            <div id = "error" class="mt-20 absolute-center"></div>
+        </div>
+            
+        </section>
+    <script src="{{ url_for('static', filename='js/search_forms.js')}}"></script>
+	</body>
+</html>

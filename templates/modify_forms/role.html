@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='resources/styles/styles.css')}}">
+    </head>
+    <body class="background">
+        <section class="full-height">
+            <div class="flex-container right-justify">
+                <button name="btns">Добавить</button>
+                <button name="btns">Редактировать</button>
+                <button name="btns">Удалить</button>
+        </div>
+        <div class="absolute-center">
+            <div name="form" class="absolute-center">
+                <form class="flex-container" id="add">
+                    <h2>Секция для добавления информации</h2>
+                    <input class="flex-item" name="role_name" type="text" placeholder="Название роли" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$"> 
+                    <input class="flex-item" name="play_name" type="text" placeholder="Название спектакля" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$">
+                    <input class="flex-item" name="voice" type="text" placeholder="Голос" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$">
+                    <input class="flex-item" name="min_weight" type="text" placeholder="Минимальный вес" pattern="^[0-9]+$">
+                    <input class="flex-item" name="max_weight" type="text" placeholder="Максимальный вес" pattern="^[0-9]+$">
+                    <input class="flex-item" name="min_height" type="text" placeholder="Минимальный рост" pattern="^[0-9]+$">
+                    <input class="flex-item" name="max_height" type="text" placeholder="Максимальный рост" pattern="^[0-9]+$">
+                    <input class="flex-item" name="min_age" type="text" placeholder="Минимальный возраст" pattern="^[0-9]+$">
+                    <input class="flex-item" name="max_age" type="text" placeholder="Максимальный возраст" pattern="^[0-9]+$">
+                    <select class="flex-item" name="sex">
+                        <option value="М">Мужчина</option>
+                        <option value="Ж">Женщина</option>
+                    </select>
+                    <label for="checkbox" class="bold">Главная роль</label>
+                    <input id ="checkbox" type="checkbox" name="is_main">
+                </form>
+                </div>
+                <div name="form" class="absolute-center hidden-form">
+                <form class="flex-container" id="update">
+                    <h2>Секция для изменения информации</h2>
+                    <input class="flex-item" name="role_name" type="text" placeholder="Название роли" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$"> 
+                    <input class="flex-item" name="play_name" type="text" placeholder="Название спектакля" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$">
+                    <input class="flex-item" name="voice" type="text" placeholder="Голос" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$">
+                    <input class="flex-item" name="min_weight" type="text" placeholder="Минимальный вес" pattern="^[0-9]+$">
+                    <input class="flex-item" name="max_weight" type="text" placeholder="Максимальный вес" pattern="^[0-9]+$">
+                    <input class="flex-item" name="min_height" type="text" placeholder="Минимальный рост" pattern="^[0-9]+$">
+                    <input class="flex-item" name="max_height" type="text" placeholder="Максимальный рост" pattern="^[0-9]+$">
+                    <input class="flex-item" name="min_age" type="text" placeholder="Минимальный возраст" pattern="^[0-9]+$">
+                    <input class="flex-item" name="max_age" type="text" placeholder="Максимальный возраст" pattern="^[0-9]+$">
+                    <select class="flex-item" name="sex">
+                        <option value="М">Мужчина</option>
+                        <option value="Ж">Женщина</option>
+                    </select>
+                    <label for="checkbox" class="bold">Главная роль</label>
+                    <input id ="checkbox" type="checkbox" name="is_main">
+                </form>
+                </div>
+                <div name="form" class="hidden-form absolute-center">
+                <form class="flex-container" id="delete">
+                    <h2>Секция для удаления информации</h2>
+                    <input class="flex-item" name="role_name" type="text" placeholder="Название роли" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$"> 
+                    <input class="flex-item" name="play_name" type="text" placeholder="Название спектакля" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$">
+                    <input class="flex-item" name="voice" type="text" placeholder="Голос" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$">
+                    <input class="flex-item" name="min_weight" type="text" placeholder="Минимальный вес" pattern="^[0-9]+$">
+                    <input class="flex-item" name="max_weight" type="text" placeholder="Максимальный вес" pattern="^[0-9]+$">
+                    <input class="flex-item" name="min_height" type="text" placeholder="Минимальный рост" pattern="^[0-9]+$">
+                    <input class="flex-item" name="max_height" type="text" placeholder="Максимальный рост" pattern="^[0-9]+$">
+                    <input class="flex-item" name="min_age" type="text" placeholder="Минимальный возраст" pattern="^[0-9]+$">
+                    <input class="flex-item" name="max_age" type="text" placeholder="Максимальный возраст" pattern="^[0-9]+$">
+                    <select class="flex-item" name="sex">
+                        <option value="М">Мужчина</option>
+                        <option value="Ж">Женщина</option>
+                    </select>
+                    <label for="checkbox" class="bold">Главная роль</label>
+                    <input id ="checkbox" type="checkbox" name="is_main">
+                </form>
+                </div>
+            <div class="mt-20">
+                    <button id="send" type="button">Отправить</button>
+                    <button id="clear" type="button" style="margin-left: 20px;">Очистить</button>    
+            </div>
+                    <div id = "error" class="mt-20 absolute-center"></div>
+            </div>
+            
+        </section>
+    <script src="{{ url_for('static', filename='js/modify_forms.js')}}"></script>
+	</body>
+</html>

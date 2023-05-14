@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='resources/styles/styles.css')}}">
+    </head>
+    <body class="background">
+        <section class="full-height">
+            <div class="flex-container right-justify">
+                <button name="btns">Добавить</button>
+                <button name="btns">Редактировать</button>
+                <button name="btns">Удалить</button>
+        </div>
+        <div class="absolute-center">
+            <div name="form" class="absolute-center">
+                <form class="flex-container" id="add">
+                    <h2>Секция для добавления информации</h2>
+                    <input class="flex-item" name="surname" type="text" placeholder="Фамилия" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$">
+                    <input class="flex-item" name="name" type="text" placeholder="Имя" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$"> 
+                    <input class="flex-item" name="third_name" type="text" placeholder="Отчество" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$"> 
+                    <input class="flex-item" name="kids" type="text" placeholder="Количество детей" pattern="^[0-9]+$">
+                    <input class="flex-item" name="work_experience" type="text" placeholder="Опыт работы" pattern="^[0-9]+$">
+                    <input class="flex-item" name="salary" type="text" placeholder="Зарплата" pattern="^[0-9]+$"> 
+                    <select class="flex-item" name="job_title">
+                    	   <option value="Служащий">Служащий</option>
+                           <option value="Актёр">Актёр</option>
+                           <option value="Постановщик">Постановщик</option>
+                           <option value="Музыкант">Музыкант</option>
+                    </select>
+                    <select class="flex-item" name="sex">
+                        <option value="М">Мужчина</option>
+                        <option value="Ж">Женщина</option>
+                    </select>
+                    <label for="date_checkbox" class="bold">Дата рождения</label>
+                    <input id="date_checkbox" value="default" type="date" name="birth_date">
+                </form>
+                </div>
+                <div name="form" class="absolute-center hidden-form">
+                <form class="flex-container" id="update">
+                    <h2>Секция для изменения информации</h2>
+                    <input class="flex-item" name="id" type="text" placeholder="Идентификатор" pattern="^[0-9]+$">
+                    <input class="flex-item" name="surname" type="text" placeholder="Фамилия" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$">
+                    <input class="flex-item" name="name" type="text" placeholder="Имя" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$"> 
+                    <input class="flex-item" name="third_name" type="text" placeholder="Отчество" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$"> 
+                    <input class="flex-item" name="kids" type="text" placeholder="Количество детей" pattern="^[0-9]+$">
+                    <input class="flex-item" name="work_experience" type="text" placeholder="Опыт работы" pattern="^[0-9]+$">
+                    <input class="flex-item" name="salary" type="text" placeholder="Зарплата" pattern="^[0-9]+$"> 
+                    <select class="flex-item" name="job_title">
+                        <option value="Служащий">Служащий</option>
+                        <option value="Актёр">Актёр</option>
+                        <option value="Постановщик">Постановщик</option>
+                        <option value="Музыкант">Музыкант</option>
+                    </select>
+                    <select class="flex-item" name="sex">
+                        <option value="М">Мужчина</option>
+                        <option value="Ж">Женщина</option>
+                    </select>
+                    <label for="date_checkbox" class="bold">Дата рождения</label>
+                    <input id="date_checkbox" value="default" type="date" name="birth_date">
+                </form>
+                </div>
+                <div name="form" class="hidden-form absolute-center">
+                <form class="flex-container" id="delete">
+                    <h2>Секция для удаления информации</h2>
+                    <input class="flex-item" name="id" type="text" placeholder="Идентификатор" pattern="^[0-9]+$">
+                    <input class="flex-item" name="surname" type="text" placeholder="Фамилия" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$">
+                    <input class="flex-item" name="name" type="text" placeholder="Имя" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$"> 
+                    <input class="flex-item" name="third_name" type="text" placeholder="Отчество" pattern="^[\u0401\u0410-\u042F][\u0401\u0451\u0430-\u044f \u0410-\u042F]+$"> 
+                    <input class="flex-item" name="kids" type="text" placeholder="Количество детей" pattern="^[0-9]+$">
+                    <input class="flex-item" name="work_experience" type="text" placeholder="Опыт работы" pattern="^[0-9]+$">
+                    <input class="flex-item" name="salary" type="text" placeholder="Зарплата" pattern="^[0-9]+$"> 
+                    <select class="flex-item" name="job_title">
+                            <option value="Служащий">Служащий</option>
+                            <option value="Актёр">Актёр</option>
+                            <option value="Постановщик">Постановщик</option>
+                            <option value="Музыкант">Музыкант</option>
+                    </select>
+                    <select class="flex-item" name="sex">
+                        <option value="М">Мужчина</option>
+                        <option value="Ж">Женщина</option>
+                    </select>
+                    <label for="date_checkbox" class="bold">Дата рождения</label>
+                    <input id="date_checkbox" value="default" type="date" name="birth_date">     
+                </form>
+            </div>
+            <div class="mt-20">
+                    <button id="send" type="button">Отправить</button>
+                    <button id="clear" type="button" style="margin-left: 20px;">Очистить</button>    
+            </div>
+                    <div id = "error" class="mt-20 absolute-center"></div>
+            </div>
+            
+        </section>
+    <script src="{{ url_for('static', filename='js/modify_forms.js')}}"></script>
+	</body>
+</html>
