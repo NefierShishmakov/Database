@@ -9,7 +9,7 @@ background: url('../images/main_background.jpg') no-repeat;
 }
 
 .result_h1 {
-    text-align="center"
+    text-align: center;
     color: #FFFFFF;
     font-size: 50px;
 }
