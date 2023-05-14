@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='resources/styles/styles.css')}}">
     <title>Title</title>
 </head>
 <body>
     {% if articles['amount'] != '' %}
-        <h1 width="100%" text-align="center">Общее количество равно: {{articles['amount']}}</h1>
+        <h1 width="100%" class="result_h1">Общее количество равно: {{articles['amount']}}</h1>
     {% endif %}
     <table align="center">
         <caption>Результирующая таблица</caption>
